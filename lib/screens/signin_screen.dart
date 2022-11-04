@@ -32,12 +32,12 @@ class _SignInScreenState extends State<SignInScreen> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.fromLTRB(
-                20, MediaQuery.of(context).size.height * 0.2, 20, 0),
+                20, MediaQuery.of(context).size.height * 0.2, 15, 0),
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/logo.png"),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 reusableTextField("enter username", Icons.person_outline, false,
                     _emailTextController),
@@ -53,7 +53,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomeScreen()));
                 }),
-                SignUpScreen()
+                // SizedBox(
+                //   height: 20,
+                // ),
+                // SignUpScreen()
               ],
             ),
           ),
@@ -65,17 +68,18 @@ class _SignInScreenState extends State<SignInScreen> {
   Row SignUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text("Don't Have Account",
-            style: TextStyle(color: Colors.white70)),
+      children: <Widget>[
+        const Text("Don't Have Account?",
+            style: TextStyle(color: Colors.white70, fontSize: 8)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => SignUpScreen()));
           },
           child: const Text(
-            "Sign Up",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            "SIGN UP",
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 8),
           ),
         )
       ],

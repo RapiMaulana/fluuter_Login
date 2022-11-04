@@ -4,8 +4,8 @@ Image logoWidget(String ImageName) {
   return Image.asset(
     ImageName,
     fit: BoxFit.fitWidth,
-    width: 240,
-    height: 240,
+    width: 210,
+    height: 210,
     color: Colors.white,
   );
 }
@@ -53,7 +53,7 @@ Container signinSignupButton(
       child: Text(
         isLogin ? 'LOG IN' : 'SIGN UP',
         style: const TextStyle(
-            color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 16),
+            color: Colors.red, fontWeight: FontWeight.bold, fontSize: 16),
       ),
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
